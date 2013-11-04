@@ -1,0 +1,26 @@
+{
+  "name": "java_default",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "java": {
+      "java_home": "/usr/java",
+      "jdk": {
+        "7": {
+          "x86_64": {
+            "url"      : "http://download.oracle.com/otn-pub/java/jdk/7u45-b18/jdk-7u45-linux-x64.tar.gz",
+            "checksum" : "f2eae4d81c69dfa79d02466d1cb34db2b628815731ffc36e9b98f96f46f94b1a"
+          }
+         }
+      },
+      "install_flavor": "oracle_rpm",
+      "jdk_version": "7",
+      "oracle": {
+        "accept_oracle_download_terms": true
+      }
+    }
+  },
+  "run_list" : [
+    "java::oracle"
+  ]
+}

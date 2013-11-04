@@ -1,5 +1,7 @@
 {
+  "name" : "centos64",
   "run_list" : [
-    "yum::epel"
+    "yum::epel",
+    "role[java_default]"
   ]
 }
